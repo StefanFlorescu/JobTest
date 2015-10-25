@@ -5,6 +5,7 @@ from os import getcwd as work_dir
 
 
 class Instance(object):
+
     def __init__(self, browser_type, url_str):
 
         if browser_type in "mozilla firefox":
@@ -18,6 +19,6 @@ class Instance(object):
         self.browser.get(url_str)
         self.browser.implicitly_wait(10)
 
-def set_instance(browser ="firefox", url ="http://front.jobularity.com"):
+def set_instance(browser ="firefox", url ="http://front2.jobularity.com"):
 
     return Instance(browser, url).browser
