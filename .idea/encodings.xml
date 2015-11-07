@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/auto/AbstractPage.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auto/BasePage.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auto/Instance.py" charset="UTF-8" />
+  </component>
+</project>

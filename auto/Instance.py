@@ -19,6 +19,8 @@ class Instance(object):
         self.browser.get(url_str)
         self.browser.implicitly_wait(10)
 
-def set_instance(browser ="firefox", url ="http://front2.jobularity.com"):
-
+def set_instance(browser ="firefox", url ="http://front.jobularity.com"):
     return Instance(browser, url).browser
+
+if __name__ == '__main__':
+    print work_dir()

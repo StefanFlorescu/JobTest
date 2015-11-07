@@ -2,7 +2,7 @@ __author__ = 'LENOVO4'
 
 import unittest
 from auto.Instance import set_instance
-from auto.AbstractPage import BasePage
+from auto.BasePage import BasePage
 
 
 instance = set_instance()
