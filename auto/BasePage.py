@@ -32,10 +32,11 @@ class BasePage(AbstractPage):
             driver.find_element_by_xpath('//input[@placeholder="Enter an industry..."]').click()
             self.select_by_text("xpath", '//ul/li[@class="ui-select-choices-group"]', "Banking")
 
-
+def main_page(instance):
+    return BasePage(instance)
 if __name__ == '__main__':
     browser = set_instance()
-    x = BasePage(browser)
-    x.login("testingsitesqa@outlook.com", "test")
-    x.wait(20)
-    x.logout()
+    x = main_page(browser)
+    x.login("testinginbox1@gmail.com", "test")
+    x.wait()
+    x.get_url("http://front.jobularity.com/zumay/")

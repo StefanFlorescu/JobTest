@@ -22,6 +22,10 @@ class AbstractPage(object):
     def wait(period=5):
         time.sleep(period)
 
+    def get_url(self, url):
+        assert "http" in url
+        return self.driver.get(url)
+
     # pauses test execution until specified element is visible on the page
     def wait_until(self, locator, timeout= 60):
         try:
@@ -66,6 +70,27 @@ class AbstractPage(object):
     def select_by_text(self, find_method, identifier, text):
         select = Select(self.driver.find_element(by=find_method, value=identifier))
         select.select_by_visible_text(text)
+
+    def set_date(self, date="01/May/2010"):
+        raw_date = date.split("/")
+        day = raw_date[0]
+        month = raw_date[1]
+        year = raw_date[2]
+        date_container = self.driver.find_element_by_xpath('//ul[@ng-model="date"]')
+        toggle = date_container.find_element_by_xpath(
+            '//button[@ng-click="toggleMode()"]/descendant::strong[@class="ng-binding"]')
+        toggle.click()
+        self.wait(1)
+        toggle.click()
+        self.wait(1)
+        date_container.find_element_by_xpath(
+            '//tbody/descendant::button[@type="button"]/span[contains(text(),%d)]'%year).click()
+        date_container.find_element_by_xpath(
+                    '//tbody/descendant::button[@type="button"]/span[contains(text(),%s)]'%month).click()
+        date_container.find_element_by_xpath(
+            '//tbody/descendant::button[@type="button"]/span[contains(text(),%s)]'%day).click()
+
+
 
 
 
