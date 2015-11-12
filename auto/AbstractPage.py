@@ -68,8 +68,9 @@ class AbstractPage(object):
             return False
 
     def select_by_text(self, find_method, identifier, text):
-        select = Select(self.driver.find_element(by=find_method, value=identifier))
-        select.select_by_visible_text(text)
+        select = self.driver.find_element(by=find_method, value=identifier)
+        select.find_element_by_xpath('//a[@class="ui-select-choices-row-inner"]/div[contains(text(),"%s")]'
+                                     %text.strip()).click()
 
     def set_date(self, date="01/May/2010"):
         raw_date = date.split("/")

@@ -9,7 +9,7 @@ class Zumay(BasePage):
         super(BasePage, self).__init__(instance)
 
     def set_work(self):
-        ng-model="date"
+        # ng-model="date"
         self.work_button.find_element_by_xpath('//i[@class="fa fa-plus-circle"]').click()
         work_container = self.driver.find_element_by_xpath('//div[@class="ngdialog-content"]')
         work_container.find_element_by_xpath('//i[@class="fa fa-calendar"]').click()

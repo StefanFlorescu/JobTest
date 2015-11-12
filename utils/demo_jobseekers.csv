@@ -1,5 +1,10 @@
-testinginbox1@gmail.com,test,jobseeker
-testinginbox2@gmail.com,test,jobseeker
-testinginbox3@gmail.com,test,jobseeker
-testinginbox4@gmail.com,test,jobseeker
-testinginbox5@gmail.com,test,jobseeker
+login_method,email,password,role,name,surename,alias,industry,skills,education
+email,testinginbox1@gmail.com,test,jobseeker,Dian,Tamdy,testinginbox1,Insurance,"dict(test1=""computer software"", test2=""analytics"")","{""institution"" : ""Harvard"", ""city"":""Oxford""}"
+email,testinginbox2@gmail.com,test,jobseeker,Robert,Tamdy,testinginbox2,Financial Services,"banking engeneerin, management consulting","ULIM, ASE Bucuresti, Universitatea din Suceava"
+email,testinginbox3@gmail.com,test,jobseeker,Patricia,Naylor,test3,Computer Software,,
+email,testinginbox4@gmail.com,test,jobseeker,David,Needham,test4,Accounting,,
+email,testinginbox5@gmail.com,test,jobseeker,Elizabeth,Storey,test5,Banking,,
+email,testinginbox6@gmail.com,test,jobseeker,Stephen,STOREY ,test6,Telecommunications,,
+facebook,testinginbox7@gmail.com,test,jobseeker,,,,Program Development,,
+twitter,testinginbox8@gmail.com,test,jobseeker,,,,Real Estate,,
+linkedin,testinginbox9@gmail.com,test,jobseeker,,,,Retail,,
