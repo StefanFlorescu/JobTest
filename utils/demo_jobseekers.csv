@@ -2,9 +2,9 @@ login_method,email,password,role,name,surename,alias,industry,skills,education
 email,testinginbox1@gmail.com,test,jobseeker,Dian,Tamdy,testinginbox1,Insurance,"dict(test1=""computer software"", test2=""analytics"")","{""institution"" : ""Harvard"", ""city"":""Oxford""}"
 email,testinginbox2@gmail.com,test,jobseeker,Robert,Tamdy,testinginbox2,Financial Services,"banking engeneerin, management consulting","ULIM, ASE Bucuresti, Universitatea din Suceava"
 email,testinginbox3@gmail.com,test,jobseeker,Patricia,Naylor,test3,Computer Software,,
-email,testinginbox4@gmail.com,test,jobseeker,David,Needham,test4,Accounting,,
-email,testinginbox5@gmail.com,test,jobseeker,Elizabeth,Storey,test5,Banking,,
-email,testinginbox6@gmail.com,test,jobseeker,Stephen,STOREY ,test6,Telecommunications,,
-facebook,testinginbox7@gmail.com,test,jobseeker,,,,Program Development,,
-twitter,testinginbox8@gmail.com,test,jobseeker,,,,Real Estate,,
-linkedin,testinginbox9@gmail.com,test,jobseeker,,,,Retail,,
+facebook,testinginbox4@gmail.com,inboxtesting,jobseeker,David,Needham,test4,Accounting,,
+facebook,testinginbox5@gmail.com,inboxtesting,jobseeker,Elizabeth,Storey,test5,Banking,,
+twitter,testinginbox6@gmail.com,inboxtesting,jobseeker,Stephen,STOREY ,test6,Telecommunications,,
+twitter,testinginbox7@gmail.com,inboxtesting,jobseeker,Louisa,Lawrence,test7,Program Development,,
+linkedin,testinginbox9@gmail.com,inboxtesting,jobseeker,Jeefrey,Lawrence,test8,Real Estate,,
+linkedin,testinginbox10@gmail.com,inboxtesting,jobseeker,Mohammed,Butler,test9,Retail,,

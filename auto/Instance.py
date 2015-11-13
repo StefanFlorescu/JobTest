@@ -1,4 +1,4 @@
-__author__ = 'LENOVO4'
+__author__ = 'Steve'
 
 import csv
 from selenium import webdriver
@@ -26,20 +26,6 @@ def set_instance(browser_type = "firefox", url_str="http://front.jobularity.com"
     browser.implicitly_wait(10)
     return browser
 
-
-def ReadCSVasDict(csv_file_path):
-    try:
-        with open(csv_file_path) as csvfile:
-            reader = csv.DictReader(csvfile)
-            user_pool = dict()
-            for row in reader:
-                user_pool[row["name"]]= row
-            print user_pool
-    except IOError as (errno, strerror):
-            print("I/O error({0}): {1}".format(errno, strerror))
-    return user_pool
-
-
 def get_dict(csv_file, user_key):
     try:
         with open(work_dir()+ csv_file) as csvfile:
@@ -57,7 +43,7 @@ class DictToObject(object):
             self.__dict__.update(entries)
 
 def set_user(file_name, user_name):
-    dict_rep= get_dict(file_name, user_name)
+    dict_rep = get_dict(file_name, user_name)
     for key in dict_rep:
         if "dict" in dict_rep[key] or "{" in dict_rep[key]:
             dict_rep[key] = eval(dict_rep[key])
@@ -72,5 +58,5 @@ if __name__ == '__main__':
     # z = set_instance("ie")
     # print type(z)
     # csv_file = work_dir() + ""
-    # ReadCSVasDict(csv_file)
-    print set_user("demo_jobseekers.csv", "Dian").__dict__
+    # csv_to_dict(csv_file)
+    print set_user("demo_jobseekers.csv", "Mohammed").__dict__

@@ -1,4 +1,4 @@
-__author__ = 'LENOVO4'
+__author__ = 'Steve'
 
 from os import getcwd
 from selenium.webdriver.support.ui import Select
@@ -67,10 +67,30 @@ class AbstractPage(object):
         except TimeoutException:
             return False
 
-    def select_by_text(self, find_method, identifier, text):
-        select = self.driver.find_element(by=find_method, value=identifier)
-        select.find_element_by_xpath('//a[@class="ui-select-choices-row-inner"]/div[contains(text(),"%s")]'
-                                     %text.strip()).click()
+    def switch_window(self):
+        self.wait(2)
+        all_windows = self.driver.window_handles
+        self.driver.switch_to.window(all_windows[1])
+        print "have switched to %s window"%self.driver.title
+
+    def switch_window_back(self):
+        all_windows = self.driver.window_handles
+        self.driver.switch_to.window(all_windows[0])
+        self.wait(1)
+        print "have switched to %s window"%self.driver.title
+
+    @staticmethod
+    def select_dropdown_text(container_object, text):
+        container_object.find_element_by_xpath('//input').send_keys(text)
+        container_object.find_element_by_xpath('//ul[@role="listbox"]/descendant::a[contains(text(),"%s")]'%text).click()
+
+    # def select_by(self, element_id, parametre, parametre_id):
+    #     driver = self.driver
+    #     select = Select(driver.find_element_by_xpath(element_id))
+    #     if "value=" in parametre_id:
+    #         select.select_by_value()
+
+
 
     def set_date(self, date="01/May/2010"):
         raw_date = date.split("/")
