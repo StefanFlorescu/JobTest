@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3847482c-2999-49dc-b98a-fbccbca02095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto/AbstractPage.py" afterPath="$PROJECT_DIR$/auto/AbstractPage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto/BasePage.py" afterPath="$PROJECT_DIR$/auto/BasePage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto/Instance.py" afterPath="$PROJECT_DIR$/auto/Instance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/demo_jobseekers.csv" afterPath="$PROJECT_DIR$/utils/demo_jobseekers.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/members.csv" afterPath="$PROJECT_DIR$/utils/members.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/user_login.py" afterPath="$PROJECT_DIR$/tests/user_login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/zap.csv" afterPath="$PROJECT_DIR$/utils/zap.csv" />
-    </list>
+    <list default="true" id="3847482c-2999-49dc-b98a-fbccbca02095" name="Default" comment="" />
     <ignored path="JobTest.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -61,7 +52,7 @@
       <file leaf-file-name="BasePage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auto/BasePage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39534885">
+            <state vertical-scroll-proportion="0.6338983">
               <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="e#142#410#0" expanded="false" />
@@ -146,10 +137,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1362" />
+    <option name="x" value="-4" />
     <option name="y" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1088" />
+    <option name="width" value="1374" />
+    <option name="height" value="732" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -174,6 +165,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -223,7 +215,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,10 +533,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1362" y="-4" width="1928" height="1088" extended-state="7" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11858006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1214,7 +1205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auto/BasePage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39534885">
+        <state vertical-scroll-proportion="0.6338983">
           <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="e#142#410#0" expanded="false" />
