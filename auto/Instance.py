@@ -12,23 +12,9 @@ def work_dir():
         working_directory = working_directory[:-5]+"utils/"
     return working_directory
 
-def set_instance(browser_type = "firefox", url_str="http://front.jobularity.com"):
-
-    if browser_type.lower() in "opera":
-        browser = webdriver.Opera("test string")
-    elif browser_type.lower() in "google chrome":
-        browser = webdriver.Chrome(work_dir()+"chromedriver.exe")
-    elif browser_type.lower() in "internet explorer" or browser_type in "ie":
-        browser = webdriver.Ie(work_dir()+"IEDriverServer.exe")
-    else:
-        browser = webdriver.Firefox()
-    browser.get(url_str)
-    browser.implicitly_wait(10)
-    return browser
-
 def get_dict(csv_file, user_key):
     try:
-        with open(work_dir()+ csv_file) as csvfile:
+        with open(work_dir() + csv_file) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 if user_key == row["name"]:
@@ -42,7 +28,21 @@ class DictToObject(object):
             assert isinstance(entries, dict)
             self.__dict__.update(entries)
 
-def set_user(file_name, user_name):
+def set_instance(browser_type = "firefox", url_str="http://front.jobularity.com"):
+
+    if browser_type.lower() in "opera":
+        browser = webdriver.Opera("test string")
+    elif browser_type.lower() in "google chrome":
+        browser = webdriver.Chrome(work_dir()+"chromedriver.exe")
+    elif browser_type.lower() in "internet explorer" or browser_type in "ie":
+        browser = webdriver.Ie(work_dir()+"IEDriverServer.exe")
+    else:
+        browser = webdriver.Firefox()
+    browser.get(url_str)
+    browser.implicitly_wait(5)
+    return browser
+
+def set_user(file_name = "demo_jobseekers.csv", user_name = "Robert"):
     dict_rep = get_dict(file_name, user_name)
     for key in dict_rep:
         if "dict" in dict_rep[key] or "{" in dict_rep[key]:
@@ -60,3 +60,6 @@ if __name__ == '__main__':
     # csv_file = work_dir() + ""
     # csv_to_dict(csv_file)
     print set_user("demo_jobseekers.csv", "Mohammed").__dict__
+    with open(work_dir() + "demo_jobseekers.csv") as csvfile:
+                reader = csv.DictReader(csvfile)
+                print type(reader)

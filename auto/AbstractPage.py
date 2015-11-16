@@ -79,18 +79,16 @@ class AbstractPage(object):
         self.wait(1)
         print "have switched to %s window"%self.driver.title
 
-    @staticmethod
-    def select_dropdown_text(container_object, text):
-        container_object.find_element_by_xpath('//input').send_keys(text)
-        container_object.find_element_by_xpath('//ul[@role="listbox"]/descendant::a[contains(text(),"%s")]'%text).click()
+    def select_dropdown_text(self, container_element, click_element, match_text):
+        container_object = self.driver.find_element_by_xpath(container_element)
+        container_object.find_element_by_xpath(click_element).click()
+        container_object.find_element_by_xpath('//ul[@role="listbox"]/descendant::*[contains(text(),"%s")]'%match_text).click()
 
-    # def select_by(self, element_id, parametre, parametre_id):
+    # def select_by(self, element_id, parameter, parameter_id):
     #     driver = self.driver
     #     select = Select(driver.find_element_by_xpath(element_id))
     #     if "value=" in parametre_id:
     #         select.select_by_value()
-
-
 
     def set_date(self, date="01/May/2010"):
         raw_date = date.split("/")
@@ -111,7 +109,27 @@ class AbstractPage(object):
         date_container.find_element_by_xpath(
             '//tbody/descendant::button[@type="button"]/span[contains(text(),%s)]'%day).click()
 
+    def login(self, user):
+        self.driver.find_element_by_css_selector("button.identif_butt").click()
+        driver = self.driver.find_element_by_xpath('//div[@class="ngdialog-content"]/div[@class="login-form"]')
+        if user.login_method == "email":
+            driver.find_element_by_name("usermail").send_keys(user.email)
+            driver.find_element_by_xpath("//input[@name='password']").send_keys(user.password)
+            driver.find_element_by_css_selector("button.sign-in").click()
+        elif user.login_method == "facebook":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-facebook"]').click()
+            self.facebook_login(user)
+        elif user.login_method == "twitter":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-twitter"]').click()
+            self.twitter_login(user)
+        elif user.login_method == "linkedin":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-linkedin"]').click()
+            self.linkedin_login(user)
 
+    def logout(self):
+        driver = self.driver
+        driver.find_element_by_class_name("user-img-x").click()
+        driver.find_element_by_link_text("Log out").click()
 
 
 
