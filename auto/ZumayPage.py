@@ -15,14 +15,20 @@ class ZumayPage(AbstractPage):
     #     self.bio_container = self.driver.find_element_by_xpath('''//div[@ng-if="value === 'about_me'"]''')
 
     def set_language(self, user):
-        language_container = self.driver.find_element_by_xpath('''//div[@class="fw"]/descendant::div[@ng-if="value === 'languages'"]''')
-        language_container.find_element_by_xpath('//ul[@class="edit-list"]/li[@ng-click="addZumaySection()" and @class="ng-scope"]')\
+        language_container = self.driver.find_element_by_xpath('''//div[@ng-if="value === 'languages'"]''')
+        language_container.find_element_by_xpath('''//ul[@class="edit-list"]/li[@ng-if="optionShown('add-new')"]/a''')\
             .click()
-        # ng-model
-        # self.work_button.find_element_by_xpath('//i[@class="fa fa-plus-circle"]').click()
-        # work_container = self.driver.find_element_by_xpath('//div[@class="ngdialog-content"]')
-        # work_container.find_element_by_xpath('//i[@class="fa fa-calendar"]').click()
-        # self.set_date()
+        print language_container.find_element_by_xpath('//h3/b').get_attribute("textContent")
+
+    def set_skills(self, user):
+        skills_container = self.driver.find_element_by_xpath('''//div[@ng-if="value === 'skills'"]''')
+        skills_container.find_element_by_xpath('''//ul[@class="edit-list"]/li[@ng-if="optionShown('add-new')"]/a/i''')\
+            .click()
+
+    def set_education(self, user):
+        education_contaibner = self.driver.find_element_by_xpath('''//div[@ng-if="value === 'education'"]''')
+        education_contaibner.find_element_by_xpath('''//ul[@class="edit-list"]/li[@ng-if="optionShown('add-new')"]/a/i''')\
+            .click()
 def zumay(instance):
     return ZumayPage(instance)
 
@@ -31,7 +37,8 @@ if __name__ == '__main__':
     jobseeker = set_user(user_name="David")
     enter = enter_system(browser)
     enter.login(jobseeker)
-    enter.wait()
-    # enter.get_url("http://front.jobularity.com/zumay/")
+    # enter.wait()
+    enter.get_url("http://front.jobularity.com/zumay/")
     profile = zumay(browser)
-    profile.set_language(jobseeker)
+    profile.set_skills(jobseeker)
+    # profile.set_language(jobseeker)

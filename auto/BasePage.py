@@ -1,6 +1,7 @@
 __author__ = 'Steve'
 
 from auto.AbstractPage import AbstractPage
+from auto.Instance import set_user, set_instance
 
 
 class BasePage(AbstractPage):
@@ -28,6 +29,29 @@ class BasePage(AbstractPage):
         driver.find_element_by_xpath('//li[@class="password-input"]/descendant::input').send_keys(user.password)
         driver.find_element_by_xpath('//input[@value="Allow access"]').click()
         self.switch_window_back()
+
+    def login(self, user):
+        self.driver.find_element_by_css_selector("button.identif_butt").click()
+        driver = self.driver.find_element_by_xpath('//div[@class="ngdialog-content"]/div[@class="login-form"]')
+        if user.login_method == "email":
+            driver.find_element_by_name("usermail").send_keys(user.email)
+            driver.find_element_by_xpath("//input[@name='password']").send_keys(user.password)
+            driver.find_element_by_css_selector("button.sign-in").click()
+        elif user.login_method == "facebook":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-facebook"]').click()
+            self.facebook_login(user)
+        elif user.login_method == "twitter":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-twitter"]').click()
+            self.twitter_login(user)
+        elif user.login_method == "linkedin":
+            driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-linkedin"]').click()
+            self.linkedin_login(user)
+        self.wait()
+
+    def logout(self):
+        driver = self.driver
+        driver.find_element_by_class_name("user-img-x").click()
+        driver.find_element_by_link_text("Log out").click()
 
     def register(self, user):
         self.driver.find_element_by_xpath('//a[@ui-sref="user.register"]').click()
@@ -76,3 +100,9 @@ class BasePage(AbstractPage):
 
 def enter_system(instance):
     return BasePage(instance)
+
+if __name__ == '__main__':
+    browser = set_instance()
+    jobseeker = set_user(user_name="Jeefrey")
+    enter = enter_system(browser)
+    enter.login(jobseeker)
