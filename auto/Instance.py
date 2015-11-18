@@ -12,6 +12,12 @@ def work_dir():
         working_directory = working_directory[:-5]+"utils/"
     return working_directory
 
+def get_dict_iter(csv_file = "demo_jobseekers.csv"):
+    csvfile = open(work_dir()+csv_file)
+    reader = csv.DictReader(csvfile)
+    return reader
+
+
 def get_dict(csv_file, user_key):
     try:
         with open(work_dir() + csv_file) as csvfile:
@@ -49,6 +55,10 @@ def set_user(file_name = "demo_jobseekers.csv", user_name = "Robert"):
             dict_rep[key] = eval(dict_rep[key])
     return DictToObject(dict_rep)
 
+def user_object(dict_rep):
+
+    return DictToObject(dict_rep)
+
 if __name__ == '__main__':
     print work_dir()
     # x = set_instance()
@@ -59,7 +69,8 @@ if __name__ == '__main__':
     # print type(z)
     # csv_file = work_dir() + ""
     # csv_to_dict(csv_file)
-    print set_user("demo_jobseekers.csv", "Mohammed").__dict__
-    with open(work_dir() + "demo_jobseekers.csv") as csvfile:
-                reader = csv.DictReader(csvfile)
-                print type(reader)
+    # print set_user("demo_jobseekers.csv", "Mohammed").__dict__
+    # with open(work_dir() + "demo_jobseekers.csv") as csvfile:
+    #             reader = csv.DictReader(csvfile)
+    #             print type(reader)
+    print get_dict_iter()
