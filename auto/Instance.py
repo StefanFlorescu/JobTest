@@ -4,6 +4,8 @@ import csv
 from selenium import webdriver
 from os import getcwd
 
+jobseeker_csv = "zap.csv"
+
 def work_dir():
     working_directory = getcwd()
     if working_directory.endswith("auto"):
@@ -12,13 +14,13 @@ def work_dir():
         working_directory = working_directory[:-5]+"utils/"
     return working_directory
 
-def get_dict_iter(csv_file = "demo_jobseekers.csv"):
+def get_dict_iter(csv_file = jobseeker_csv):
     csvfile = open(work_dir()+csv_file)
     reader = csv.DictReader(csvfile)
     return reader
 
 
-def get_dict(csv_file, user_key):
+def get_dict(csv_file = jobseeker_csv, user_key = "Robert"):
     try:
         with open(work_dir() + csv_file) as csvfile:
             reader = csv.DictReader(csvfile)
@@ -48,7 +50,7 @@ def set_instance(browser_type = "firefox", url_str="http://front.jobularity.com"
     browser.implicitly_wait(5)
     return browser
 
-def set_user(file_name = "demo_jobseekers.csv", user_name = "Robert"):
+def set_user(file_name = jobseeker_csv, user_name = "Robert"):
     dict_rep = get_dict(file_name, user_name)
     for key in dict_rep:
         if "dict" in dict_rep[key] or "{" in dict_rep[key]:
