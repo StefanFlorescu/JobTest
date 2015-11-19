@@ -1,3 +1,5 @@
-company,title,location,industry
-Astreya,Test Engeneer,Sydney,Computer Software
+company,name,location,industry
+Astreya,Test Engineer,Sydney,Computer Software
 Astreya,Training & Development Manager,San Bruno,Computer Software
+Astreya,Accounting Manager,,Sales
+Astreya,Sales and Marketing Coordinator,Amsterdam,Sales

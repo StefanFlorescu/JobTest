@@ -234,7 +234,7 @@ def load_users(counter):
 if __name__ == '__main__':
     pass
     # test_accounts()
-    # test_apply_jobcampaign("Engineer", "Australia", "Yes")
+    test_apply_jobcampaign("Corporate Lawyer", "Moscow", "Yes")
     # test_enter()
     # test_user_info()
     # test_dashboard_employer()
@@ -243,4 +243,4 @@ if __name__ == '__main__':
     # test_library_videos()
     # test_zumay_page()
     # test_dashboard_jobseeker()
-    load_users(7)
+    # load_users(7)

@@ -103,6 +103,12 @@ class AbstractPage(object):
         date_container.find_element_by_xpath(
             '//tbody/descendant::button[@type="button"]/span[contains(text(),%s)]'%day).click()
 
+    def logout(self):
+        driver = self.driver
+        driver.find_element_by_class_name("user-img-x").click()
+        driver.find_element_by_link_text("Log out").click()
+
+
 
 
 

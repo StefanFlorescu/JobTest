@@ -1,7 +1,7 @@
 __author__ = 'Steve'
 
 from auto.AbstractPage import AbstractPage
-from auto.Instance import set_user, set_instance
+from auto.Instance import get_object_form_csv, set_instance
 
 
 class BasePage(AbstractPage):
@@ -99,11 +99,11 @@ class BasePage(AbstractPage):
             driver.find_element_by_xpath('//select[@name="accountType"]/option[@value="%s"]'%user.role).click()
             driver.find_element_by_xpath('//button[contains(text(),"Continue")]')
 
-def enter_system(instance):
+def enter_page(instance):
     return BasePage(instance)
 
 if __name__ == '__main__':
     browser = set_instance()
-    jobseeker = set_user(user_name="Jeefrey")
-    enter = enter_system(browser)
+    jobseeker = get_object_form_csv(user_name="Jeefrey")
+    enter = enter_page(browser)
     enter.login(jobseeker)

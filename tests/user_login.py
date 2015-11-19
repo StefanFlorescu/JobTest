@@ -1,15 +1,15 @@
 __author__ = 'Steve'
 
 import unittest
-from auto.Instance import set_instance, set_user, get_dict_iter, user_object
-from auto.BasePage import enter_system
+from auto.Instance import set_instance, set_user, dict_iterator, user_object
+from auto.BasePage import enter_page
 
 def load_user_instance(loop_counter):
 
-    for raw in get_dict_iter():
+    for raw in dict_iterator():
         user = user_object(raw)
         x  = set_instance()
-        browser = enter_system(x)
+        browser = enter_page(x)
         browser.login(user)
         loop_counter = loop_counter -1
         if loop_counter <= 0:
@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     # instance = set_instance()
     # jobseeker1 = set_user(user_name="Robert")
-    # test = enter_system(instance)
+    # test = enter_page(instance)
     # test.login(jobseeker1)
     # test.wait()
     # test.logout()

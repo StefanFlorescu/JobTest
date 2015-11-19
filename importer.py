@@ -409,9 +409,9 @@ def get_language(instance):
         return data
     else:
         if is_front(instance):
-            driver.find_element_by_xpath('//a[@ui-sref="zumay"]').click()
+            driver.find_element_by_xpath('//a[@ui-sref="zumay_page"]').click()
             language_container = driver.find_element_by_xpath(
-                '//div[@class="zumay-content-block languages-block editable-section"]/descendant::div[@class="zumay-languages-list"]')
+                '//div[@class="zumay_page-content-block languages-block editable-section"]/descendant::div[@class="zumay_page-languages-list"]')
             language_counter = len(language_container.find_elements_by_xpath('div'))
 
             for item in xrange(1, language_counter+1):
@@ -444,9 +444,9 @@ def get_education(instance):
         return data
     else:
         if is_front(instance):
-            driver.find_element_by_xpath('//a[@ui-sref="zumay"]').click()
+            driver.find_element_by_xpath('//a[@ui-sref="zumay_page"]').click()
             education_container = driver.find_element_by_xpath(
-                '//div[@class="zumay-content-block education-block editable-section"]/div[3]/div[@class="block-body"]')
+                '//div[@class="zumay_page-content-block education-block editable-section"]/div[3]/div[@class="block-body"]')
             education_counter = len(education_container.find_elements_by_xpath('div'))
 
             for item in xrange(1, education_counter+1):
@@ -481,9 +481,9 @@ def get_experience(instance):
     else:
         if is_front(instance):
             if is_front(instance):
-                driver.find_element_by_xpath('//a[@ui-sref="zumay"]').click()
+                driver.find_element_by_xpath('//a[@ui-sref="zumay_page"]').click()
                 experince_container = driver.find_element_by_xpath(
-                    '//div[@class="zumay-content-block work-exp-block editable-section"]/div[3]/div[@class="block-body no-pad"]')
+                    '//div[@class="zumay_page-content-block work-exp-block editable-section"]/div[3]/div[@class="block-body no-pad"]')
                 experince_counter = len(experince_container.find_elements_by_xpath('div'))
 
                 for item in xrange(1, experince_counter+1):
@@ -518,9 +518,9 @@ def get_skills(instance):
     else:
         if is_front(instance):
             if is_front(instance):
-                driver.find_element_by_xpath('//a[@ui-sref="zumay"]').click()
+                driver.find_element_by_xpath('//a[@ui-sref="zumay_page"]').click()
                 experince_container = driver.find_element_by_xpath(
-                    '//div[@class="zumay-content-block work-exp-block editable-section"]/div[3]/div[@class="block-body no-pad"]')
+                    '//div[@class="zumay_page-content-block work-exp-block editable-section"]/div[3]/div[@class="block-body no-pad"]')
                 experince_counter = len(experince_container.find_elements_by_xpath('div'))
 
                 for item in xrange(1, experince_counter+1):
