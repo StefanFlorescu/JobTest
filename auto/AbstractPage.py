@@ -108,7 +108,8 @@ class AbstractPage(object):
         driver.find_element_by_class_name("user-img-x").click()
         driver.find_element_by_link_text("Log out").click()
 
-
+    def close(self):
+        self.driver.close()
 
 
 

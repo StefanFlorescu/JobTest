@@ -59,7 +59,7 @@ def set_instance(browser_type="firefox", url_str="http://front.jobularity.com"):
     else:
         browser = webdriver.Firefox()
     browser.get(url_str)
-    browser.implicitly_wait(5)
+    browser.implicitly_wait(7)
     return browser
 
 if __name__ == '__main__':

@@ -1,40 +1,44 @@
 __author__ = 'Steve'
 
 import unittest
-from auto.Instance import set_instance, set_user, dict_iterator, user_object
+from auto.Instance import set_instance, get_object_form_csv
 from auto.BasePage import enter_page
 
-def load_user_instance(loop_counter):
+class Test(unittest.TestCase):
 
-    for raw in dict_iterator():
-        user = user_object(raw)
-        x  = set_instance()
-        browser = enter_page(x)
-        browser.login(user)
-        loop_counter = loop_counter -1
-        if loop_counter <= 0:
-            break
+    def setUp(self):
+        self.verificationErrors = []
+        self.accept_next_alert = True
 
+    def test1_login_methods(self):
+        # load browser instance
+        instance = set_instance()
 
+        # test login email method
+        jobseeker1 = get_object_form_csv(user_name="Robert")
+        test = enter_page(instance)
+        test.login(jobseeker1)
+        test.logout()
+
+        # test facebook login method
+        jobseeker2 = get_object_form_csv(user_name="David")
+        test.login(jobseeker2)
+        test.logout()
+
+        # test tweeter login method
+        jobseeker3 = get_object_form_csv(user_name="Louisa")
+        test.login(jobseeker3)
+        test.logout()
+
+        # test linkedin login method
+        jobseeker4 = get_object_form_csv(user_name="Jeefrey")
+        test.login(jobseeker4)
+        test.logout()
+        # close the browser instance
+        test.close()
+
+    def tearDown(self):
+        self.assertEqual([], self.verificationErrors)
 
 if __name__ == '__main__':
-
-    # instance = set_instance()
-    # jobseeker1 = set_user(user_name="Robert")
-    # test = enter_page(instance)
-    # test.login(jobseeker1)
-    # test.wait()
-    # test.logout()
-    # jobseeker2 = set_user(user_name="David")
-    # test.login(jobseeker2)
-    # test.wait()
-    # test.logout()
-    # jobseeker3 = set_user(user_name="Louisa")
-    # test.login(jobseeker3)
-    # test.wait()
-    # test.logout()
-    # jobseeker4 = set_user(user_name="Jeefrey")
-    # test.login(jobseeker4)
-    # test.wait()
-    # test.logout()
-    load_user_instance(20)
+    unittest.main()

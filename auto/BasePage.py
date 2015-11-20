@@ -47,7 +47,8 @@ class BasePage(AbstractPage):
             driver.find_element_by_xpath('//ul[@class="social-list"]/descendant::i[@class="fa fa-linkedin"]').click()
             self.linkedin_login(user)
         assert self.is_element_present("xpath", '//header[@id="page_header"]')
-        print "have entered the system as %s, email: %s || password: %s"%(user.role, user.email, user.password)
+        print "have entered the system with %s as %s, email: %s || password: %s"\
+              %(user.login_method, user.role, user.email, user.password)
 
     def logout(self):
         driver = self.driver

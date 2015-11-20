@@ -27,15 +27,19 @@ class SearchPage(AbstractPage):
     def search_job(self, job):
         driver = self.driver
         driver.find_element_by_xpath("//a[@href='/search']").click()
-        # driver.find_element_by_xpath('//*[text()="Full-time"]').click()
+
         place = driver.find_element_by_xpath('//input[@ng-model="search.location"]')
         place.clear()
         place.send_keys(job.location)
-        self.wait(1)
         position = driver.find_element_by_xpath("//input[@ng-model='search.title']")
         position.clear()
         position.send_keys(job.name)
-        self.wait(3)
+        self.wait(1)
+        company = driver.find_element_by_xpath(
+            '//jbt-job-search-filters/descendant::span[contains(text(),"%s")]/preceding-sibling::input'%job.company)
+        company.click()
+        self.wait(2)
+        # self.wait_until('//div[@class="element-description"]/h4/a[contains(text(),"$s")]')
         driver.find_element_by_partial_link_text(job.name).click()
 
     def apply_to_job(self, job):
