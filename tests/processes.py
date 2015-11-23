@@ -43,6 +43,6 @@ def load_user_instance(loop_counter):
             break
 
 if __name__ == '__main__':
-    # user_applies_jobs("Robert")
-    # users_apply_job("Quality Assurance (QA) Engineer")
+    user_applies_jobs("Robert")
+    users_apply_job("Quality Assurance (QA) Engineer")
     load_user_instance(4)
