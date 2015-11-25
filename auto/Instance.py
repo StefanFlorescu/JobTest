@@ -72,8 +72,9 @@ if __name__ == '__main__':
     # print type(z)
     # csv_file = work_dir() + ""
     # csv_to_dict(csv_file)
-    # print set_user("demo_jobseekers.csv", "Mohammed").__dict__
-    # with open(work_dir() + "demo_jobseekers.csv") as csvfile:
-    #             reader = csv.DictReader(csvfile)
-    #             print type(reader)
+    print get_object_form_csv("demo_jobseekers.csv", "Robert").__dict__
+    with open(work_dir() + "demo_jobseekers.csv") as csvfile:
+                reader = csv.DictReader(csvfile)
+                print type(reader)
+
     print dict_iterator()

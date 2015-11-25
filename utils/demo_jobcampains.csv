@@ -1,16 +1,17 @@
-company,name,location,industry
-Cisco,Senior Accountant,Hollywood,Sales
-Cisco,Accounting Assistant,Hollywood,Sales
-Cisco,Sales Associate,Hollywood,Sales
-Cisco,Regional Sales Manager,Hollywood,Sales
-Cisco,PHP Web Developer,Chisinau,Computer Software
-Cisco,Senior Web Designer,Chisinau,Computer Software
-Cisco,Java Web Software Developer,Chisinau,Computer Software
-Cisco,.NET Software Developer / Programmer,Chisinau,Computer Software
-Cisco,ScrumMaster,Chisinau,Computer Software
-Cisco,Retail Pharmacist,Kiev,Pharmaceuticals
-Cisco,Clinical Pharmacist,Kiev,Pharmaceuticals
-Astreya,Truck Driver Van,Toronto,Automotive
-Cisco,"Truck Driver, Heavy / Tractor-Trailer",Chisinau,Automotive
-Cisco,Mechanical Engineer,Chisinau,Automotive
-Astreya,Quality Assurance (QA) Engineer,Amsterdam,Computer Software
+company,name,location,industry,level,employment_type,Campaign_status,currency,description,expiration_date,must_skills,nice_skills,education,majors,certification,languages
+Cisco,Senior Accountant,Hollywood,Sales,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Accounting Assistant,Hollywood,Sales,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Sales Associate,Hollywood,Sales,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Regional Sales Manager,Hollywood,Sales,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,PHP Web Developer,Chisinau,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Senior Web Designer,Chisinau,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Java Web Software Developer,Chisinau,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,.NET Software Developer / Programmer,Chisinau,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,ScrumMaster,Chisinau,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Retail Pharmacist,Kiev,Pharmaceuticals,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Clinical Pharmacist,Kiev,Pharmaceuticals,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Astreya,Truck Driver Van,Toronto,Automotive,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,"Truck Driver, Heavy / Tractor-Trailer",Chisinau,Automotive,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Cisco,Mechanical Engineer,Chisinau,Automotive,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Astreya,Quality Assurance (QA) Engineer,Amsterdam,Computer Software,Mid-Senior level,Full-time,Ongoing,Mid-Senior level,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English""]"
+Search4Staff,Office Manager,Chisinau,Executive Office,Associate,Temporary,Ongoing,Leu,test job description,30.11.2015,"[""Ability to Meet Deadlines""]","[""Coordinate Office Activities""]","[""Some College""]","[""Computer Applications""]","[""ACMT""]","[""English"",""French""]"
