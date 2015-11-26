@@ -27,9 +27,9 @@ class AbstractPage(object):
         return self.driver.get(url)
 
     # pauses test execution until specified element is visible on the page
-    def wait_until(self, xpath_locator, timeout= 60):
+    def wait_until(self, locator, timeout= 60):
         try:
-            ui.WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, xpath_locator)))
+            ui.WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
         except TimeoutException:
             print "the expected element is not visible, timeout exception raised, check for bugs"
             raise TimeoutException
@@ -79,15 +79,10 @@ class AbstractPage(object):
         self.wait(1)
         print "have switched to %s window"%self.driver.title
 
-    @staticmethod
-    def select_dropdown_text( container_object, click_element, match_text):
+    def select_dropdown_text(self, container_element, click_element, match_text):
+        container_object = self.driver.find_element_by_xpath(container_element)
         container_object.find_element_by_xpath(click_element).click()
         container_object.find_element_by_xpath('//ul[@role="listbox"]/descendant::*[contains(text(),"%s")]'%match_text).click()
-
-    @staticmethod
-    def select_option_text(container_object, select_element, match_text):
-        select = Select(container_object.find_element_by_xpath(select_element))
-        select.select_by_visible_text(match_text)
 
     def set_date(self, date="01/May/2010"):
         raw_date = date.split("/")
@@ -115,6 +110,7 @@ class AbstractPage(object):
 
     def close(self):
         self.driver.close()
+
 
 
 

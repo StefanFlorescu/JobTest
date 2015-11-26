@@ -16,13 +16,12 @@ def work_dir():
         working_directory = working_directory[:-5] + "utils/"
     return working_directory
 
-
 def dict_iterator(csv_file=jobseekers_csv):
     csvfile = open(work_dir() + csv_file)
     reader = csv.DictReader(csvfile)
     return reader
 
-def get_dict(csv_file, user_key):
+def get_dict(csv_file=jobseekers_csv, user_key="Robert"):
     try:
         with open(work_dir() + csv_file) as csvfile:
             reader = csv.DictReader(csvfile)
@@ -42,18 +41,12 @@ class DictToObject(object):
                 dict_rep[key] = eval(dict_rep[key])
         self.__dict__.update(dict_rep)
 
-def get_object_form_csv(file_name, user_name):
-    assert '.csv' in file_name
-    return DictToObject(get_dict(file_name, user_name))
+def get_object_form_csv(file_name=jobseekers_csv, user_name="Robert"):
+    dict_rep = get_dict(file_name, user_name)
+    return DictToObject(dict_rep)
 
 def get_object(dict_rep):
     return DictToObject(dict_rep)
-
-def get_campaign(campaign_name="Web Master", file_name="demo_jobcampains.csv"):
-    return get_object_form_csv(file_name, campaign_name)
-
-def get_user(user_name="Robert", file_name = "demo_jobseekers.csv"):
-    return get_object_form_csv(file_name, user_name)
 
 
 def set_instance(browser_type="firefox", url_str="http://front.jobularity.com"):
@@ -71,18 +64,4 @@ def set_instance(browser_type="firefox", url_str="http://front.jobularity.com"):
 
 if __name__ == '__main__':
     print work_dir()
-    # x = set_instance()
-    # print type(x)
-    # y = set_instance("chrome")
-    # print type(y)
-    # z = set_instance("ie")
-    # print type(z)
-    # csv_file = work_dir() + ""
-    # csv_to_dict(csv_file)
-    # print get_object_form_csv("demo_jobseekers.csv", "Robert").__dict__
-    # with open(work_dir() + "demo_jobseekers.csv") as csvfile:
-    #             reader = csv.DictReader(csvfile)
-    #             print type(reader)
-    #
-    # print dict_iterator()
-    print get_user()
+    print dict_iterator()
