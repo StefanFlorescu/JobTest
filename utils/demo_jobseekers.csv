@@ -1,9 +1,11 @@
 login_method,email,password,role,name,surename,alias,industry,skills,education,work_experience,languages
-email,testinginbox1@gmail.com,test,jobseeker,Dian,Tamdy,testinginbox1,Insurance,"[dict(value=""Accounting"", rank = 90, isprimary = True), dict(value=""Ruby"", rank = 50, isprimary = False)]","{""institution"" : ""Harvard"", ""city"":""Oxford""}",,"[dict( value = ""English"", proficiency=""Professional""), dict(value=""French"", proficiency=""Professional"")]"
-email,testinginbox2@gmail.com,test,jobseeker,Robert,Tamdy,testinginbox2,Financial Services,"[dict(value=""Accounting"", rank = 90, isprimary = True), dict(value=""Ruby"", rank = 50, isprimary = False)]","ULIM, ASE Bucuresti, Universitatea din Suceava",,"[dict( value = ""English"", proficiency=""Professional""), dict(value=""French"", proficiency=""Professional"")]"
+email,testinginbox1@gmail.com,test,jobseeker,Dian,Tamdy,testinginbox1,Insurance,"[dict(value=""Accounting"", rank = 90, isprimary = True), dict(value=""Ruby"", rank = 50, isprimary = False)]","[{""institution"" : ""University of Oxford"", ""city"":""Oxford"", ""country"":""United Kingdom"", ""major"":""Economics"", ""degree"":""CELTA""}]",,"[dict( value = ""English"", proficiency=""Professional""), dict(value=""French"", proficiency=""Professional"")]"
+email,testinginbox2@gmail.com,test,jobseeker,Robert,Tamdy,testinginbox2,Financial Services,"[dict(value=""Accounting"", rank = 90, isprimary = True), dict(value=""Ruby"", rank = 50, isprimary = False)]","[{""institution"" : ""University of Oxford"", ""city"":""Oxford"", ""country"":""United Kingdom"", ""major"":""Economics"", ""degree"":""CELTA""}]",,"[dict( value = ""English"", proficiency=""Professional""), dict(value=""French"", proficiency=""Professional"")]"
 email,testinginbox3@gmail.com,test,jobseeker,Patricia,Naylor,test3,Computer Software,,,,English
 facebook,testinginbox4@gmail.com,inboxtesting,jobseeker,David,Needham,test4,Accounting,,,,English
 twitter,testinginbox7@gmail.com,inboxtesting,jobseeker,Louisa,Lawrence,test7,Program Development,,,,
 linkedin,testinginbox9@gmail.com,inboxtesting,jobseeker,Jeefrey,Lawrence,test8,Real Estate,,,,
 email,testinginbox11@gmail.com,test,jobseeker,Test,Testerson11,testinginbox11,Accounting,,,,
 email,testinginbox12@gmail.com,test,jobseeker,Test,Testerson12,testinginbox12,Computer Software,,,,
+,,,employer,Kevin,Roth,testingsitesqa@hotmail.com,Recruiting,None,None,None,None
+,,,team_member,Kevyn,Frayer,testingsitesqa@gmail.com,Recruiting,None,None,None,None

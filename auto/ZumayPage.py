@@ -43,7 +43,7 @@ class ZumayPage(AbstractPage):
 
     def set_education(self, user_object):
         for education in user_object.education:
-            education_container = self.driver.find_element_by_xpath('//div[@zumay-skills=""]')
+            education_container = self.driver.find_element_by_xpath('//div[@zumay-education=""]')
             education_container.find_element_by_xpath('div/div[2]/div[1]/div/div/ul/li[2]/a').click()
             popup = self.driver.find_element_by_xpath('//body/div[2]/div[@class="ngdialog-content" and@role="document"]')
             assert "Manage your Skill" == popup.find_element_by_tag_name("h2").get_attribute('textContent')
@@ -80,7 +80,7 @@ class SearchPage(AbstractPage):
 
     def apply_to_job(self, job):
         driver = self.driver
-        self.wait_until('//div[@class="sticky-apply ng-scope"]')
+        self.wait_until('//div[@class="sticky-apply"]')
         if self.is_element_visible('//button[contains(text(),"Apply for this Job")]', 1):
             application = driver.find_element_by_xpath('//button[contains(text(),"Apply for this Job")]')
             application.click()
@@ -92,7 +92,7 @@ class SearchPage(AbstractPage):
                         '//div[@class="ngdialog-content"]/descendant::button[contains(text(),"Apply")]').click()
 
             assert self.is_element_visible(
-                '//jbt-jobseeker-dashboard-jobs/descendant::a[contains(text(),"%s")]/following-sibling::span[contains(text(),"%s")]'\
+                '//div[@ng-repeat="jobRow in tab.jobs track by $index"]/descendant::a[contains(text(),"%s")]/following::span[contains(text(),"%s")]'\
                 %(job.name, job.location))
             print "have applied to the job campaign"
             self.wait(2)

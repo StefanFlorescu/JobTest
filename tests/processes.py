@@ -20,15 +20,17 @@ def user_applies_jobs(user):
 def users_apply_job(campaign_name):
     job_campaign = get_object_form_csv(file_name="demo_jobcampains.csv", user_name=campaign_name)
     instance = set_instance()
+    browser = enter_page(instance)
 
     for raw_applicant in dict_iterator():
         applicant = get_object(raw_applicant)
-        browser = enter_page(instance)
-        browser.login(applicant)
-        browser = search_page(instance)
-        browser.search_job(job_campaign)
-        browser.apply_to_job(job_campaign)
-        browser.logout()
+        if applicant.role == "jobseeker":
+            browser = enter_page(instance)
+            browser.login(applicant)
+            browser = search_page(instance)
+            browser.search_job(job_campaign)
+            browser.apply_to_job(job_campaign)
+            browser.logout()
     browser.close()
 
 def load_user_instance(loop_counter):
@@ -44,5 +46,5 @@ def load_user_instance(loop_counter):
 
 if __name__ == '__main__':
     # user_applies_jobs("Robert")
-    # users_apply_job("Office Manager")
-    load_user_instance(3)
+    users_apply_job("Sr. Programmer")
+    # load_user_instance(3)

@@ -26,6 +26,7 @@ class BasePage(AbstractPage):
         self.switch_window()
         driver = self.driver
         driver.find_element_by_xpath('//li[@class="email-input"]/descendant::input').send_keys(user.email)
+        self.wait(1)
         driver.find_element_by_xpath('//li[@class="password-input"]/descendant::input').send_keys(user.password)
         driver.find_element_by_xpath('//input[@value="Allow access"]').click()
         self.switch_window_back()
